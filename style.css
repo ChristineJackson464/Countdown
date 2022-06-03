@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { 
+  font-size: 62.5%;
+  /* 
+  height: 100vh;
+  overflow: hidden;
+  margin: 0; 
+  */
+}
+
+.container {
+  background-color: #17181b; 
+  height: 1000vh;
+  width: 100%;
+  position: relative;
+}
+
+.countdown-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  text-align: center;
+  color: #ddd;
+}
+
+.countdown-wrapper h1 {
+  font-size: 8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 8rem;
+  text-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.5);
+}
+
+.countdown {
+  display: flex;
+  /* flex-direction: column;
+   */
+  justify-content: center;
+}
+
+.countdown div {
+  background: linear-gradient(
+    to bottom, 
+    rgba(61, 58, 58, 0.9) 50%, 
+    rgba(99, 93, 93, 0.9) 0)
+    ;
+  height: 13rem;
+  width: 13rem;
+  margin: 0 4rem 12rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  font-weight: 400;
+  box-shadow: 0.8rem 2.5rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.countdown div::before {
+  background-color: #17181b;
+  content: '';
+  position: absolute;
+  height: .24rem;
+  width: 100%;
+}
+
+.countdown div::after {
+  content: attr(data-content);
+  font-size: 2.2rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: -6rem;
+}
+
+.reset {
+  background-color: #a52a2a;
+  height: 6rem;
+  width: 22rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #eee;
+  text-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.5);
+  outline: none;
+}
